@@ -1,0 +1,188 @@
+<!-- This template is based on the website of Kaku (http://kaku.rocks) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.</title>
+    <meta name="description" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://commixproject.com">
+    <meta property="og:description" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="apple-touch-icon" href="public/img/logo2.png">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo+2">
+    <link rel="stylesheet" type="text/css" href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/vendor/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/global.css">
+    <link rel="stylesheet" type="text/css" href="public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="public/css/asciinema-player.css" />
+    <script src="public/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script class="contributor-template" type="js/template">
+    <li>
+
+    <!--  -->
+    <p class="avatar"></p>
+      <a href="#" target="_blank">
+        <img class="avatar" src="avatar" alt="">
+      </a>
+    <br><p class="name"></p>
+    <br>Contributions:
+    <b><p class="contributions"></p></b>
+    </li>
+    </script>
+    <script src="public/js/contributor.js"></script>
+
+    <!--  -->
+    <script class="issue-template" type="js/template">
+    <p class="issue"></p>
+    </script>
+    <script src="public/js/issues.js"></script>
+
+    <!--  -->
+    <script class="pull-template" type="js/template">
+    <p class="pull"></p>
+    </script>
+    <script src="public/js/pulls.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">
+            <img style="margin-top: -17px;" src="public/img/logo.png" alt="commix logo" width="55" height="55">
+          </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./"><img style="margin-top: 3px; margin-left: -2px;" src="public/img/logo2.png" alt="commix logo"></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a target="_blank" href="https://github.com/commixproject/commix"><i class="fa fa-github"></i>GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/commixproject"><i class="fa fa-twitter"></i>Twitter</a>
+            </li>
+            <li>
+              <a href="" data-toggle="modal" data-target="#asciinema"><i class="fa fa-play-circle"></i>Demo</a>
+            </li>
+            <li>
+              <a href="contribute.html"><i class="fa fa-users"></i><u>Contribute</u></a>
+            </li>
+            <li>
+              <a href="" data-toggle="modal" data-target="#myModal"><i class="fa fa-dollar"></i>Donate</a>
+            </li>
+            <li>
+              <a href="faq.html"><i class="fa fa-comment"></i>FAQ</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="each-block statement">
+      <div class="container">
+        <!-- Donations Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div style="width:65%;" class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-dollar"></i> Donate</h4>
+              </div>
+              <div class="modal-body text-justify">
+              <p>Commix Project is the outcome of many hours work and total personal dedication</strong>.<br>Feel free to <a href="https://www.paypal.com/gr/webapps/mpp/send-money-online" target="_blank"><strong>Donate</strong></a> via PayPal to <code>donations@commixproject.com</code> and instantly prove your feelings for it. :)</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asciinema Modal -->
+    <div class="modal fade" id="asciinema" role="dialog">
+      <div style="width:65%;" class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><i class="fa fa-play-circle"></i> Demo </h4>
+          </div>
+          <div class="modal-body text-justify">
+          <asciinema-player src="public/js/asciicast-105988.json" cols="127" rows="41"></asciinema-player>
+          <script src="public/js/asciinema-player.js"></script>
+          <pre>Watch more demos <a href="https://www.youtube.com/channel/UCFGVXu3e6jdvyIiSy0mPI4A" target="_blank"><strong>here</strong></a> .</pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="each-block cover">
+    <br><br>
+    </div>
+
+    <div class="each-block contributors">
+      <div class="container">
+        <br>
+        <h3><i class="fa fa-users"></i> Project's contributors list</h3>
+        <div class="alert alert-info" role="alert">
+          <div class="row vertical-align">
+            <div class="col-xs-10">
+              <p>The following users have already <strong><a href="https://github.com/commixproject/commix/graphs/contributors" target="_blank">contributed code</strong></a> to the commix project. <br><u><strong>Note:</strong></u> Only users with contributions that have been merged into the <strong><a href="https://github.com/commixproject/commix" target="_blank">master branch</strong></a> are listed below.</p>
+              In order to join the team and to contribute code to the commix project:
+              <ol>
+                <li>
+                  <div class="each-block issues issue-list">
+                    Take a look at the <strong><a href="https://github.com/commixproject/commix/issues/" class="issue-list" target="_blank"><b></b></strong></a> or open yours.
+                  </div>
+                </li>
+                <li>
+                <div class="each-block pulls pull-list">
+                  Submit your <strong>pull request(s)</strong>. Currently <a href="https://github.com/commixproject/commix/pulls/" class="pull-list" target="_blank"><b></b></strong></a> for approval.
+                </div>  
+                </li>
+                <li>
+                  Feel proud for being in the <strong>Hall of Fame</strong> of project's contributors list below.</p>
+                </li>
+              </ol>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+        <ul class="list-unstyled contributor-list col">
+        </ul>
+      </div>
+    </div>
+
+    <div class="each-block cover">
+    <br>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <footer>
+      <p>Made in Greece with <font size="1" color="grey"><b> <i class="fa fa-coffee"></b></i></font> and <font size="1" color="red"><b><i class="fa fa-heart"></i></b></font><br></font>by <a href="https://github.com/stasinopoulos" target="_blank">Anastasios Stasinopoulos</a> © 2014-2018</p>
+    </footer> 
+    </nav>
+    
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!-- This template is based on the website of Kaku (http://kaku.rocks) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.</title>
+    <meta name="description" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://commixproject.com">
+    <meta property="og:description" content="Commix Project | Automated All-in-One OS Command Injection and Exploitation Tool.">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="apple-touch-icon" href="public/img/logo2.png">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Exo+2">
+    <link rel="stylesheet" type="text/css" href="public/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/vendor/components-font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/global.css">
+    <link rel="stylesheet" type="text/css" href="public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="public/css/asciinema-player.css" />
+    <script src="public/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="public/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/js/contributor.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./">
+            <img style="margin-top: -17px;" src="public/img/logo.png" alt="commix logo" width="55" height="55">
+          </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./"><img style="margin-top: 3px; margin-left: -2px;" src="public/img/logo2.png" alt="commix logo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a target="_blank" href="https://github.com/commixproject/commix"><i class="fa fa-github"></i>GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/commixproject"><i class="fa fa-twitter"></i>Twitter</a>
+            </li>
+            <li>
+              <a href="" data-toggle="modal" data-target="#asciinema"><i class="fa fa-play-circle"></i>Demo</a>
+            </li>
+            <li>
+              <a href="contribute.html"><i class="fa fa-users"></i>Contribute</a>
+            </li>
+            <li>
+              <a href="" data-toggle="modal" data-target="#myModal"><i class="fa fa-dollar"></i>Donate</a>
+            </li>
+            <li>
+              <a href="faq.html"><i class="fa fa-comment"></i>FAQ</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="each-block cover">
+    <hr>
+    </div>
+    <div class="each-block statement text-justify">
+      <div class="container">
+        <br>
+
+        <!-- Donations Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div style="width:65%;" class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-dollar"></i> Donate</h4>
+              </div>
+              <div class="modal-body text-justify">
+              <p>Commix Project is the outcome of many hours work and total personal dedication</strong>.<br>Feel free to <a href="https://www.paypal.com/gr/webapps/mpp/send-money-online" target="_blank"><strong>donate</strong></a> via PayPal to <code>donations@commixproject.com</code> and instantly prove your feelings for it. :)</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asciinema Modal -->
+        <div class="modal fade" id="asciinema" role="dialog">
+          <div style="width:65%;" class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-play-circle"></i> Demo </h4>
+              </div>
+              <div class="modal-body text-justify">
+              <asciinema-player src="public/js/asciicast-105988.json" cols="127" rows="41"></asciinema-player>
+              <script src="public/js/asciinema-player.js"></script>
+              <pre>Watch more demos <a href="https://www.youtube.com/channel/UCFGVXu3e6jdvyIiSy0mPI4A" target="_blank"><strong>here</strong></a> .</pre>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Automated All-in-One OS Command Injection and Exploitation Tool. </h3>
+        <p><strong>Commix</strong> (short for [<strong>comm</strong>]and [<strong>i</strong>]njection e[<strong>x</strong>]ploiter) is an automated tool written by <strong><a href="https://github.com/stasinopoulos" target="_blank">Anastasios Stasinopoulos</strong></a></b> (<a href="https://twitter.com/ancst" target="_blank"><strong>@ancst</strong></a>) that can be used from web developers, penetration testers or even security researchers in order to test web-based applications with the view to find bugs, errors or vulnerabilities related to <a href="https://www.owasp.org/index.php/Command_Injection" target="_blank"><strong>command injection</strong></a> attacks. The Commix Project uses GitHub to host its <a href="https://github.com/commixproject/commix" target="_blank"><strong>source code</strong></a> and to track <a href="https://github.com/commixproject/commix/issues" target="_blank"><strong>issues</strong></a>.</p>
+
+        <div class="each-block cover">
+        <br>
+        </div>
+        
+        <div id="myCarousel">
+          <div class="carousel-inner">
+            <div class="item active">
+               <img src="public/img/gallery/image.png"/>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="each-block cover">
+    <br>
+    </div>
+
+    <div class="each-block statement">
+      <div class="container">
+        <div class="row text-justify">
+          <div class="col col-md-4">
+            <p class="with-icon "><i class="fa fa-child"></i></p>
+            <h3>Easy to Use</h3>
+            <p>It is very <a href="https://github.com/commixproject/commix/wiki/Usage" target="_blank"><strong>easy</strong></a> to find and exploit a command injection vulnerability in a certain vulnerable parameter or HTTP header(s).</p>
+          </div>
+          <div class="col col-md-4">
+            <p class="with-icon"><i class="fa fa-battery-full"></i></p>
+            <h3>Batteries Included</h3>
+            <p>Everything you need to perform effective OS command injection <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank"><strong>attacks</strong></a> against multiple operating systems and <a href="https://github.com/commixproject/commix/wiki/Target-applications" target="_blank"><strong>applications</strong></a> is included.</p>
+          </div>
+          <div class="col col-md-4">
+            <p class="with-icon"><i class="fa fa-cogs"></i></p>
+            <h3>Modular</h3>
+            <p>You are able to develop and easily import your <a href="https://github.com/commixproject/commix/wiki/Module-Development" target="_blank"><strong>own</strong></a> modules in order to increase the capabilities of commix and/or adapt it to your needs.</p>
+          </div>
+          <div class="col col-md-4">
+            <p class="with-icon"><i class="fa fa-puzzle-piece"></i></p>
+            <h3>Compatible</h3>
+            <p>It is <a href="https://github.com/commixproject/commix/wiki/Usage-Examples" target="_blank"><strong>compatible</strong></a> with multiple penetration testing tools and freamworks (i.e Metasploit Freamwork, BurpSuite, SQLMap etc) thereby the success rate of a penetration test is increased.</p>
+          </div>
+          <div class="col col-md-4">
+            <p class="with-icon"><i class="fa fa-desktop"></i></p>
+            <h3>All Platforms</h3>
+            <p>It is Written in Python! No need to compile anything, only <a href="https://www.python.org/downloads/" target="_blank"><strong>Python</strong></a> (version 2.6.x or 2.7.x) is required to be installed for commix to run over Linux (<i class="fa fa-linux"></i>), Mac OSX (<i class="fa fa-apple"></i>) and Windows (<i class="fa fa-windows"></i>).</p>
+          </div>
+          <div class="col col-md-4">
+            <p class="with-icon"><i class="fa fa-code-fork"></i>
+            <h3>Free / Open Source</h3>
+            <p>It is a free (as in beer!) and open source project licensed under the <a href="https://github.com/commixproject/commix/wiki/License" target="_blank"><strong>GPLv3 License</strong></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="each-block cover">
+<!--     <hr> -->
+    </div>
+
+    <div class="each-block app-featured">
+      <div class="container">
+        <h3>Featured in the following penetration testing distributions </h3>
+        <div class="row">
+          <div class="col col-md-2">
+            <a target="_blank" href="https://www.kali.org/">
+              <img src="public/img/featured/kalilinux.png" alt="https://www.kali.org/">
+            </a>
+            <h5>Kali Linux</h5>
+          </div>
+          <div class="col col-md-2">
+            <a target="_blank" href="https://backbox.org/">
+              <img src="public/img/featured/backbox.png" alt="https://backbox.org/">
+            </a>
+            <h5>BackBox Linux</h5>
+          </div>
+          <div class="col col-md-2">
+            <a target="_blank" href="http://blackarch.org/">
+              <img src="public/img/featured/blackarch.png" alt="http://blackarch.org/">
+            </a>
+            <h5>BlackArch Linux</h5>
+          </div>
+          <div class="col col-md-2">
+            <a target="_blank" href="https://archstrike.org/">
+              <img src="public/img/featured/archstrike.png" alt="https://archstrike.org/">
+            </a>
+            <h5>ArchStrike Linux</h5>
+          </div>
+          <div class="col col-md-2">
+            <a target="_blank" href="https://www.parrotsec.org/">
+              <img src="public/img/featured/parrotsec.png" alt="https://www.parrotsec.org/">
+            </a>
+            <h5>Parrot Security OS</h5>
+          </div>
+          <div class="col col-md-2">
+            <a target="_blank" href="http://www.weaknetlabs.com/">
+              <img src="public/img/featured/weakerthan.png" alt="http://www.weaknetlabs.com/">
+            </a>
+            <h5>Weakerthan Linux</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="each-block cover">
+    <br><br>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <footer>
+      <p>Made in Greece with <font size="1" color="grey"><b> <i class="fa fa-coffee"></b></i></font> and <font size="1" color="red"><b><i class="fa fa-heart"></i></b></font><br></font>by <a href="https://github.com/stasinopoulos" target="_blank">Anastasios Stasinopoulos</a> © 2014-2018</p>
+    </footer> 
+    </nav>
+  </body>
+</html>

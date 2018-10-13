@@ -1,0 +1,36 @@
+/* override Bootstrap */
+.navbar-static-top {
+  margin-bottom: 0;
+}
+
+/* misc */
+i.fa-heartbeat {
+  color: #ff1142;
+}
+
+.qa-breadcrumb {
+  max-width: 790px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* others */
+
+body {
+  font-family: 'Exo 2', sans-serif;
+}
+
+body > nav i {
+  margin: 0 5px;
+}
+
+footer {
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 6px;
+  color: white;
+  text-align: center;
+}
+
