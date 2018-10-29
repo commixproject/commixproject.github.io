@@ -25,10 +25,9 @@
         crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Contributors Template  -->
     <script class="contributor-template" type="js/template">
     <li>
-
-    <!--  -->
     <p class="avatar"></p>
       <a href="#" target="_blank">
         <img class="avatar" src="avatar" alt="">
@@ -39,27 +38,28 @@
     </li>
     </script>
     <script src="public/js/contributor.js"></script>
-
-    <!--  -->
+    <!-- Issues Template  -->
     <script class="issue-template" type="js/template">
     <p class="issue"></p>
     </script>
     <script src="public/js/issues.js"></script>
-
-    <!--  -->
+    <!-- Pull Requests Template -->
     <script class="pull-template" type="js/template">
     <p class="pull"></p>
     </script>
     <script src="public/js/pulls.js"></script>
-
   </head>
+
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a class="navbar-brand" href="./">
-            <img style="margin-top: -17px;" src="public/img/logo.png" alt="commix logo" width="55" height="55">
+            <img style="margin-top: -13px;" src="public/img/logo.png" alt="commix logo" width="50" height="50">
+          </a>
+          <a class="navbar-brand" href="./">
+            <img style="margin-top: 4px; margin-left: -10px;" src="public/img/logo2.png" alt="commix logo">
           </a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -67,36 +67,40 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./"><img style="margin-top: 3px; margin-left: -2px;" src="public/img/logo2.png" alt="commix logo"></a>
         </div>
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a target="_blank" href="https://github.com/commixproject/commix"><i class="fa fa-github"></i>GitHub</a>
+              <a style="margin-left: -13px;" target="_blank" href="https://github.com/commixproject/commix"><i class="fa fa-github"></i>GitHub</a>
             </li>
             <li>
-              <a target="_blank" href="https://twitter.com/commixproject"><i class="fa fa-twitter"></i>Twitter</a>
+              <a style="margin-left: -13px;" target="_blank" href="https://twitter.com/commixproject"><i class="fa fa-twitter"></i>Twitter</a>
             </li>
             <li>
-              <a href="" data-toggle="modal" data-target="#asciinema"><i class="fa fa-play-circle"></i>Demo</a>
+              <a style="margin-left: -13px;" href="" data-toggle="modal" data-target="#asciinema"><i class="fa fa-play-circle"></i>Demo</a>
             </li>
             <li>
-              <a href="contribute.html"><i class="fa fa-users"></i><u>Contribute</u></a>
+              <a style="margin-left: -13px;" href="contribute.html"><i class="fa fa-users"></i><u>Contribute</u></a>
             </li>
             <li>
-              <a href="" data-toggle="modal" data-target="#myModal"><i class="fa fa-dollar"></i>Donate</a>
+              <a style="margin-left: -13px;" href="" data-toggle="modal" data-target="#myModal"><i class="fa fa-dollar"></i>Donate</a>
             </li>
             <li>
-              <a href="faq.html"><i class="fa fa-comment"></i>FAQ</a>
+              <a style="margin-left: -13px;" href="faq.html"><i class="fa fa-comment"></i>FAQ</a>
             </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+        </div>
+      </div>
     </nav>
+
+    <div class="each-block cover">
+    </div>
 
     <div class="each-block statement">
       <div class="container">
+
         <!-- Donations Modal -->
         <div class="modal fade" id="myModal" role="dialog">
           <div style="width:65%;" class="modal-dialog">
@@ -116,8 +120,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
     <!-- Asciinema Modal -->
     <div class="modal fade" id="asciinema" role="dialog">
@@ -148,7 +150,7 @@
     <div class="each-block contributors">
       <div class="container">
         <br>
-        <h3><i class="fa fa-users"></i> Project's contributors list</h3>
+        <h3><i class="fa fa-users"></i> Project's contributors list.</h3>
         <div class="alert alert-info" role="alert">
           <div class="row vertical-align">
             <div class="col-xs-10">
@@ -169,7 +171,6 @@
                   Feel proud for being in the <strong>Hall of Fame</strong> of project's contributors list below.</p>
                 </li>
               </ol>
-              <!-- </div> -->
             </div>
           </div>
         </div>
