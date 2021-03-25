@@ -15,7 +15,16 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.7;
-/*  color: #777;*/
+  color: #777;
+  background: #fff;
+}
+
+.fixed {
+  font-family: 'Exo 2';
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.7;
+  color: #777;
   background: #fff;
 }
 
