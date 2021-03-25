@@ -24,8 +24,6 @@ body {
   font-weight: 400;
   font-size: 23px;
   line-height: 1.7;
-  color: #777;
-  background: #fff;
 }
 
 #page {
@@ -431,7 +429,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .ubea-cover.ubea-cover-xs {
-  height: 500px;
+  height: 150px;
 }
 @media screen and (max-width: 768px) {
   .ubea-cover.ubea-cover-xs {
@@ -441,7 +439,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .ubea-cover.ubea-cover-xs .display-t,
 .ubea-cover.ubea-cover-xs .display-tc {
-  height: 500px;
+  height: 160px;
   display: table;
   width: 100%;
 }
@@ -2048,10 +2046,10 @@ form label {
   position: relative;
 }
 
-#ubea-services .feature-left .icon i {
+#ubea-about .feature-left .icon i {
   color: #cccccc !important;
 }
-#ubea-services .feature-left h3 {
+#ubea-about .feature-left h3 {
   color: #F30;
   font-size: 22px;
 }
