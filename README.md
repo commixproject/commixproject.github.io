@@ -1,1 +1,1 @@
-Commix Project website - https://commixproject.com.
+[Commix Project](https://commixproject.com) official website contents.
