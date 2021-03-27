@@ -1,15 +1,15 @@
----
+<!-- ---
 title: Oops! Page Not Found
 permalink: 404.html
----
+--- -->
 <!DOCTYPE HTML>
 <!--
 Based on uBeasa template (developed by freshDesignweb).
 -->
 <html>
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.</title>
   <meta name="description" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,7 +57,7 @@ Based on uBeasa template (developed by freshDesignweb).
     <!-- jQuery Easing -->
     <script src="https://commixproject.com/js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-<!--    <script src="https://commixproject.com/js/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Waypoints -->
     <script src="https://commixproject.com/js/jquery.waypoints.min.js"></script>
     <!-- Carousel -->
@@ -71,65 +71,33 @@ Based on uBeasa template (developed by freshDesignweb).
     <script src="https://commixproject.com/js/magnific-popup-options.js"></script>
     <!-- Main -->
     <script src="https://commixproject.com/js/main.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Header / Footer -->
+    <script src="https://commixproject.com/js/header.js" type="text/javascript" defer></script>
+    <script src="https://commixproject.com/js/footer.js" type="text/javascript" defer></script>
     </head>
     <body>
 
-    <div class="ubea-loader"></div>
-    <div id="page">
-    <nav class="ubea-nav" role="navigation">
-        <div class="ubea-container">
-            <div class="row">
-                <div class="col-sm-2 col-xs-12">
-                    <div id="ubea-logo"><a href="index.html"><img src="https://commixproject.com/images/logo.png"></a>
-                    </div>
-                </div>
-                <div class="col-xs-20 text-right main-nav menu-1 fixed">
-                    <ul>
-                        <li><a href="/" data-nav-section="about">HOME</a><font color="red"> | </font></li>
-                        <li><a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=UGBDUDJRW8U4E" class="external">DONATE</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <header-component></header-component>   
 
     <div id="ubea-hero" class="js-fullheight"  data-section="home">
         <div class="flexslider js-fullheight">
             <ul class="slides">
                 <li style="background-image: url(https://commixproject.com/images/background.png);">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                        <div class="slider-text-inner">
-                            <h2>Oops! Page Not Found</h2>
-                            <p><a href="/" class="btn btn-primary btn-lg"><i class="fa fa-home"></i> Go home</a></p>
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2>Oops! Page Not Found</h2>
+                                <p><a href="/" class="btn btn-primary btn-lg"><i class="fa fa-home"></i> Go home</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <footer id="ubea-footer" role="contentinfo">
-        <div class="ubea-container">
-            <div class="row copyright">
-                <div class="col-md-10">
-                    <p class="pull-left">
-                        <small class="block">
-                            <br>
-                            Made in Greece with <font size="2" color="grey"><b> <i class="fa fa-coffee"></b></i></font> and <font size="2" color="red"><b><i class="fa fa-heart"></i></b></font></font> by <a href="https://github.com/stasinopoulos" target="_blank">Anastasios Stasinopoulos</a>.
-                            <br>
-                            <a href="https://github.com/commixproject/" target="_blank">Commix Project</a> is licensed under the <a href="https://github.com/commixproject/commix/wiki/License" target="_blank">GPLv3 License</a> © 2014-2021.
-                        </small>
-                    </p>
-                    <p class="pull-right">
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer-component></footer-component>   
 
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
