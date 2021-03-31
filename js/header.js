@@ -11,7 +11,7 @@ class Header extends HTMLElement {
       <div class="ubea-container">
         <div class="row">
           <div class="col-sm-2 col-xs-12">
-            <div id="ubea-logo"><a href="index.html"><img src="https://commixproject.com/images/logo.png"></a>
+            <div id="ubea-logo"><a href="index.html"><img src="https://commixproject.com/images/logo.png" width=250 height=auto></a>
             </div>
           </div>
           <div class="col-xs-20 text-right main-nav menu-1 fixed">

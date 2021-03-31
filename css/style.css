@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
   z-index: 1001;
   background: #fff;
   webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
@@ -969,6 +969,10 @@ form label {
 }
 #ubea-footer .copyright .block {
   display: block;
+}
+
+.pull-left{
+  padding: 2%
 }
 
 #ubea-offcanvas {

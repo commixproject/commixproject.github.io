@@ -8,7 +8,7 @@ class Footer extends HTMLElement {
     <footer id="ubea-footer" role="contentinfo">
       <div class="ubea-container">
         <div class="row copyright">
-          <div class="col-md-10">
+          <div class="col-md-12">
             <p class="pull-left">
               <small class="block">
                 <br>
@@ -18,14 +18,13 @@ class Footer extends HTMLElement {
               </small>
             </p>
             <p class="pull-right">
+              <br>
             </p>
           </div>
         </div>
-
       </div>
     </footer>
     `;
   }
 }
-
 customElements.define('footer-component', Footer);
