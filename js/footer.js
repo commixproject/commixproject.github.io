@@ -19,6 +19,7 @@ class Footer extends HTMLElement {
             </p>
             <p class="pull-right">
               <br>
+            	<a href="https://www.obrela.com?utm_source=commixproject&utm_medium=banner&utm_campaign=clickthrough" target="_blank"><img src="https://commixproject.com/images/OSI_Logo_SPONSORED.png" width=250 height=auto></a> 
             </p>
           </div>
         </div>
