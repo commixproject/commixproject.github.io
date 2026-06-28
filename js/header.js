@@ -57,7 +57,7 @@ class Header extends HTMLElement {
 
       <!-- MODAL -->
       <div class="modal fade" id="spreadModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document" style="max-width:920px;">
+        <div class="modal-dialog" role="document" style="max-width:500px;">
           <div class="modal-content">
 
             <div class="modal-header" style="border-bottom:none;">
