@@ -52,7 +52,7 @@ class Footer extends HTMLElement {
                   <img
                     src="https://commixproject.com/images/OSI_Logo_SPONSORED.png"
                     width="250"
-                    alt="Obrela Security Industries Sponsor"
+                    alt="Obrela"
                     loading="lazy"
                   >
                 </a>

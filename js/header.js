@@ -13,28 +13,20 @@ class Header extends HTMLElement {
                   <a href="/" aria-label="Commix Homepage">
                     <img
                       src="https://commixproject.com/images/logo.png"
-                      width="250"
+                      width="270"
                       alt="Commix Project Logo"
                     >
                   </a>
                 </div>
               </div>
-
+      
               <div class="col-sm-10 col-xs-12 text-right main-nav menu-1 fixed">
                 <ul>
-
                   <li>
                     <a href="#about" data-nav-section="about">
                       ABOUT
                     </a>
-                    <span class="nav-divider">|</span>
-                  </li>
-
-                  <li>
-                    <a href="#faq" data-nav-section="faq">
-                      FAQ
-                    </a>
-                    <span class="nav-divider">|</span>
+                    <span class="nav-divider"> | </span>
                   </li>
 
                   <li>
@@ -47,7 +39,6 @@ class Header extends HTMLElement {
                       DONATE
                     </a>
                   </li>
-
                 </ul>
               </div>
 
