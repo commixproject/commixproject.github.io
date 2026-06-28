@@ -38,7 +38,15 @@ class Header extends HTMLElement {
                     >
                       DONATE
                     </a>
+                    <span class="nav-divider"> | </span>
                   </li>
+
+                  <li>
+                    <a href="#" id="spreadTrigger" class="external">
+                      SPREAD
+                    </a>
+                  </li>
+
                 </ul>
               </div>
 
@@ -46,7 +54,54 @@ class Header extends HTMLElement {
           </div>
         </nav>
       </div>
+
+      <!-- MODAL -->
+      <div class="modal fade" id="spreadModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="max-width:920px;">
+          <div class="modal-content">
+
+            <div class="modal-header" style="border-bottom:none;">
+              <button type="button" class="close" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body text-center" style="padding:20px;">
+              <img src="https://commixproject.com/images/official_commix_sticker.png"
+                   class="img-responsive"
+                   style="margin:auto;width:70%;max-width:90%">
+             <br>
+             <h4 class="modal-title">
+                From screen to street!
+              </h4>
+             <h3 class="modal-title">
+                Print it. Stick it. Spread it.
+              </h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
     `;
+
+    // bind event AFTER render
+    setTimeout(() => {
+      const trigger = this.querySelector("#spreadTrigger");
+
+      if (trigger) {
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          // Bootstrap modal (needs jQuery + bootstrap.js)
+          if (window.jQuery) {
+            $("#spreadModal").modal("show");
+          } else {
+            // fallback if no bootstrap
+            const modal = this.querySelector("#spreadModal");
+            if (modal) modal.style.display = "block";
+          }
+        });
+      }
+    }, 0);
   }
 }
 
