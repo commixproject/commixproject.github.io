@@ -1,24 +1,24 @@
 ;(function () {
-
+	
 	'use strict';
 
 	var isMobile = {
-		Android: function () {
+		Android: function() {
 			return navigator.userAgent.match(/Android/i);
 		},
-		BlackBerry: function () {
+		BlackBerry: function() {
 			return navigator.userAgent.match(/BlackBerry/i);
 		},
-		iOS: function () {
+		iOS: function() {
 			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
 		},
-		Opera: function () {
+		Opera: function() {
 			return navigator.userAgent.match(/Opera Mini/i);
 		},
-		Windows: function () {
+		Windows: function() {
 			return navigator.userAgent.match(/IEMobile/i);
 		},
-		any: function () {
+		any: function() {
 			return (
 				isMobile.Android() ||
 				isMobile.BlackBerry() ||
@@ -30,48 +30,55 @@
 	};
 
 	/* =========================
-	   FIX 1: SAFE FULLHEIGHT
+	   FULL HEIGHT (SAFE)
 	   ========================= */
-	var fullHeight = function () {
+	var fullHeight = function() {
+
 		var setHeight = function () {
 			if (!isMobile.any()) {
-				$('.js-fullheight').css('height', window.innerHeight);
+				$('.js-fullheight').css('height', $(window).height());
 			} else {
-				// IMPORTANT: do NOT force 100vh on mobile (fixes missing hero text)
-				$('.js-fullheight').css('height', 'auto');
+				$('.js-fullheight').css('min-height', $(window).height());
 			}
 		};
 
 		setHeight();
-		$(window).on('resize orientationchange', function () {
-			setHeight();
-		});
+		$(window).on('resize orientationchange', setHeight);
 	};
 
-	var mobileMenuOutsideClick = function () {
-		$(document).click(function (e) {
+	/* =========================
+	   OUTSIDE CLICK MENU FIX
+	   ========================= */
+	var mobileMenuOutsideClick = function() {
+
+		$(document).on('click', function (e) {
 			var container = $("#ubea-offcanvas, .js-ubea-nav-toggle");
 
 			if (!container.is(e.target) && container.has(e.target).length === 0) {
-				if ($('body').hasClass('offcanvas')) {
-					$('body').removeClass('offcanvas');
-					$('.js-ubea-nav-toggle').removeClass('active');
-				}
+				$('body').removeClass('offcanvas');
+				$('.js-ubea-nav-toggle').removeClass('active');
 			}
 		});
+
 	};
 
-	var header = function () {
+	/* =========================
+	   HEADER FIX (SAFE HEIGHT)
+	   ========================= */
+	var header = function() {
 		if ($('.ubea-nav').length) {
 			$('.header-fixed').css('padding-top', $('.ubea-nav').outerHeight());
 		}
 	};
 
-	var navigation = function () {
-		$('body').on(
-			'click',
+	/* =========================
+	   NAVIGATION
+	   ========================= */
+	var navigation = function() {
+
+		$('body').on('click',
 			'#ubea-offcanvas ul a:not(.external), .main-nav a:not(.external)',
-			function (event) {
+			function(event){
 
 				var section = $(this).data('nav-section');
 
@@ -87,114 +94,254 @@
 				event.preventDefault();
 			}
 		);
+
 	};
 
-	var offcanvasMenu = function () {
-		$('body').prepend('<div id="ubea-offcanvas" />');
-		$('body').prepend('<a href="#" class="js-ubea-nav-toggle ubea-nav-toggle"><i></i></a>');
+	/* =========================
+	   OFFCANVAS MENU (SAFE CLONE)
+	   ========================= */
+	var offcanvasMenu = function() {
+
+		if ($('#ubea-offcanvas').length === 0) {
+			$('body').prepend('<div id="ubea-offcanvas" />');
+			$('body').prepend('<a href="#" class="js-ubea-nav-toggle ubea-nav-toggle"><i></i></a>');
+		}
 
 		var clone1 = $('.menu-1 > ul').clone();
 		var clone2 = $('.menu-2 > ul').clone();
 
-		$('#ubea-offcanvas').append(clone1);
-		$('#ubea-offcanvas').append(clone2);
+		$('#ubea-offcanvas').empty().append(clone1).append(clone2);
 	};
 
-	var burgerMenu = function () {
-		$('body').on('click', '.js-ubea-nav-toggle', function (event) {
+	/* =========================
+	   BURGER MENU
+	   ========================= */
+	var burgerMenu = function() {
+
+		$('body').on('click', '.js-ubea-nav-toggle', function(event){
 			event.preventDefault();
 			$('body').toggleClass('offcanvas');
 			$(this).toggleClass('active');
 		});
+
 	};
 
-	var navActive = function (section) {
+	/* =========================
+	   NAV ACTIVE
+	   ========================= */
+	var navActive = function(section) {
+
 		$('.main-nav li').removeClass('active');
-		$('.main-nav a[data-nav-section="' + section + '"]')
+
+		$('.main-nav a[data-nav-section="'+section+'"]')
 			.closest('li')
 			.addClass('active');
+
 	};
 
-	var navigationSection = function () {
-		var $section = $('div[data-section]');
+	/* =========================
+	   SCROLL SECTION TRACKING
+	   ========================= */
+	var navigationSection = function() {
 
+		var $section = $('div[data-section]');
 		if (!$section.length) return;
 
-		$section.waypoint(function (direction) {
+		$section.waypoint(function(direction) {
+
 			if (direction === 'down') {
 				navActive($(this.element).data('section'));
 			}
+
 		}, { offset: '150px' });
 
-		$section.waypoint(function (direction) {
+		$section.waypoint(function(direction) {
+
 			if (direction === 'up') {
 				navActive($(this.element).data('section'));
 			}
+
 		}, {
-			offset: function () {
+			offset: function() {
 				return -$(this.element).height() + 155;
 			}
 		});
+
 	};
 
-	var sliderMain = function () {
+	/* =========================
+	   FIXED FLEXSLIDER (IMPORTANT)
+	   ========================= */
+	var sliderMain = function() {
 
-		// FIX 2: wait DOM + images ready (this fixes missing hero text)
-		setTimeout(function () {
+		setTimeout(function(){
 
 			var $flex = $('#ubea-hero .flexslider');
-
 			if (!$flex.length) return;
+
+			var setHero = function () {
+				var h = $(window).height();
+				$('#ubea-hero').css('height', h);
+				$('#ubea-hero .flexslider').css('height', h);
+				$('#ubea-hero .slides > li').css('height', h);
+			};
+
+			setHero();
 
 			$flex.flexslider({
 				animation: "fade",
 				slideshowSpeed: 5000,
 				directionNav: true,
-				start: function () {
+				smoothHeight: false,
+
+				start: function(){
 					$('.slider-text').addClass('animated fadeInUp');
 				},
-				before: function () {
+
+				before: function(){
 					$('.slider-text').removeClass('animated fadeInUp');
+				},
+
+				after: function(){
+					$('.slider-text').addClass('animated fadeInUp');
 				}
 			});
 
-			// FIX 3: proper mobile height handling for slider
-			var setHeroHeight = function () {
-				$('#ubea-hero .flexslider .slides > li').css(
-					'height',
-					window.innerHeight
-				);
-			};
+			$(window).on('resize orientationchange', function(){
+				setHero();
+				$flex.resize();
+			});
 
-			setHeroHeight();
-			$(window).on('resize orientationchange', setHeroHeight);
+		}, 150);
 
-		}, 200);
 	};
 
 	/* =========================
-	   FIX 4: SAFE MODAL (MOBILE + CLONES)
+	   DROPDOWN
 	   ========================= */
-	var bindSpreadModal = function () {
-		$('body').on('click', '#spreadTrigger', function (e) {
-			e.preventDefault();
+	var dropdown = function() {
 
-			if (window.jQuery && $.fn.modal) {
-				$('#spreadModal').modal('show');
-			} else {
-				$('#spreadModal').css({
-					display: 'block',
-					opacity: 1
-				});
+		$('.has-dropdown').hover(
+			function(){
+				$(this).find('.dropdown')
+					.css('display','block')
+					.addClass('animated-fast fadeInUpMenu');
+			},
+			function(){
+				$(this).find('.dropdown')
+					.css('display','none')
+					.removeClass('animated-fast fadeInUpMenu');
 			}
-		});
+		);
+
 	};
 
-	var loaderPage = function () {
+	/* =========================
+	   OWL CAROUSEL
+	   ========================= */
+	var owlCarousel = function(){
+
+		$('.owl-carousel-carousel').owlCarousel({
+			items: 3,
+			loop: true,
+			margin: 20,
+			nav: true,
+			dots: true,
+			smartSpeed: 800,
+			responsive:{
+				0:{items:1},
+				600:{items:2},
+				1000:{items:3}
+			}
+		});
+
+		$('.owl-carousel-fullwidth').owlCarousel({
+			items: 1,
+			loop: true,
+			nav: true,
+			dots: true,
+			smartSpeed: 800
+		});
+
+	};
+
+	/* =========================
+	   GO TOP
+	   ========================= */
+	var goToTop = function() {
+
+		$('.js-gotop').on('click', function(e){
+			e.preventDefault();
+			$('html, body').animate({ scrollTop: 0 }, 500);
+		});
+
+		$(window).on('scroll', function(){
+			$('.js-top').toggleClass('active', $(window).scrollTop() > 200);
+		});
+
+	};
+
+	/* =========================
+	   LOADER
+	   ========================= */
+	var loaderPage = function() {
 		$(".ubea-loader").fadeOut("slow");
 	};
 
-	$(function () {
+	/* =========================
+	   COUNTER
+	   ========================= */
+	var counterWayPoint = function() {
+		if ($('#ubea-counter').length) {
+			$('#ubea-counter').waypoint(function(direction){
+				if (direction === 'down' && !$(this.element).hasClass('animated')) {
+					$('.js-counter').countTo();
+					$(this.element).addClass('animated');
+				}
+			}, { offset: '90%' });
+		}
+	};
+
+	/* =========================
+	   ACCORDION
+	   ========================= */
+	var accordion = function() {
+		$('.ubea-accordion-heading').on('click', function(e){
+			e.preventDefault();
+
+			var $acc = $(this).closest('.ubea-accordion');
+
+			$acc.find('.ubea-accordion-content').slideToggle(300);
+			$acc.toggleClass('active');
+		});
+	};
+
+	/* =========================
+	   🔥 MODAL FIX (IMPORTANT)
+	   ========================= */
+	var bindSpreadModal = function () {
+
+		$('body').on('click', '#spreadTrigger', function(e){
+			e.preventDefault();
+
+			var $modal = $('#spreadModal');
+
+			if (!$modal.length) return;
+
+			// Bootstrap modal if exists
+			if (typeof $.fn.modal === 'function') {
+				$modal.modal('show');
+			} else {
+				$modal.fadeIn(200).addClass('open');
+			}
+		});
+
+	};
+
+	/* =========================
+	   INIT
+	   ========================= */
+	$(function(){
 		fullHeight();
 		mobileMenuOutsideClick();
 		header();
@@ -203,8 +350,13 @@
 		burgerMenu();
 		navigationSection();
 		sliderMain();
-		bindSpreadModal();
+		dropdown();
+		owlCarousel();
+		goToTop();
 		loaderPage();
+		counterWayPoint();
+		accordion();
+		bindSpreadModal();
 	});
 
 }());
