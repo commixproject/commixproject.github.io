@@ -50,13 +50,13 @@ body {
 }
 
 a {
-  color: #F30;
+  color: #F10000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #F30;
+  color: #F10000;
   outline: none;
   text-decoration: none;
 }
@@ -74,17 +74,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #F30;
+  background: #F10000;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #F30;
+  background: #F10000;
 }
 
 ::selection {
   color: #fff;
-  background: #F30;
+  background: #F10000;
 }
 
 .ubea-container {
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: bold;
 }
 .ubea-nav #ubea-logo em {
-  color: #F30;
+  color: #F10000;
 }
 .ubea-nav a {
   padding: 0px 10px;
@@ -150,7 +150,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.5s;
 }
 .ubea-nav ul li a:hover, .ubea-nav ul li a:focus, .ubea-nav ul li a:active {
-  color: #F30;
+  color: #F10000;
 }
 .ubea-nav ul li.has-dropdown {
   position: relative;
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .ubea-nav ul li.btn-cta a span {
   border: none !important;
-  background: #F30;
+  background: #F10000;
   padding: 4px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -238,7 +238,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .ubea-nav ul li.active > a {
-  color: #F30 !important;
+  color: #F10000 !important;
 }
 
 #ubea-header .ubea-video-link a {
@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
 }
 .ubea-cover a {
-  color: #F30;
+  color: #F10000;
 }
 .ubea-cover a:hover {
   color: white;
@@ -519,7 +519,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #F30;
+  color: #F10000;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -625,7 +625,7 @@ form label {
 #ubea-counter .counter {
   font-size: 50px;
   margin-bottom: 10px;
-  color: #F30;
+  color: #F10000;
   font-weight: 100;
   display: block;
 }
@@ -728,7 +728,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #F30;
+  color: #F10000;
 }
 .feature-center p, .feature-center h3 {
   margin-bottom: 30px;
@@ -754,7 +754,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 40px;
-  color: #F30;
+  color: #F10000;
 }
 .feature-left .feature-copy {
   float: right;
@@ -799,7 +799,7 @@ form label {
   margin-left: -25px;
   height: 2px;
   left: 50%;
-  background: #F30;
+  background: #F10000;
 }
 .ubea-heading h2.ubea-left:before {
   left: 0;
@@ -858,7 +858,7 @@ form label {
 }
 
 #ubea-subscribe {
-  background: #F30;
+  background: #F10000;
 }
 #ubea-subscribe .form-control {
   background: transparent;
@@ -1232,9 +1232,9 @@ form label {
 }
 
 .btn-primary {
-  background: #F30;
+  background: #F10000;
   color: #fff;
-  border: 2px solid #F30 !important;
+  border: 2px solid #F10000 !important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #ff6540 !important;
@@ -1242,11 +1242,11 @@ form label {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #F30;
-  border: 2px solid #F30;
+  color: #F10000;
+  border: 2px solid #F10000;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #F30;
+  background: #F10000;
   color: #fff;
 }
 
@@ -1396,7 +1396,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #F30;
+  border-color: #F10000;
 }
 
 .row-pb-md {
@@ -1440,7 +1440,7 @@ form label {
   margin-left: 0px;
 }
 .ubea-nav .ubea-contact ul li a i {
-  color: #F30;
+  color: #F10000;
 }
 .ubea-nav .ubea-contact ul li a:hover i {
   color: #fff;
@@ -1459,7 +1459,7 @@ form label {
   width: 33.33%;
   float: left;
   padding: 30px;
-  background: #F30;
+  background: #F10000;
   position: relative;
   text-align: center;
 }
@@ -1669,7 +1669,7 @@ form label {
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 10px 0;
-  color: #F30;
+  color: #F10000;
 }
 .ubea-card-item .ubea-text span {
   color: #b3b3b3;
@@ -1816,14 +1816,14 @@ form label {
 }
 .owl-theme .owl-controls .owl-nav [class*="owl-"] i {
   font-size: 24px;
-  background: #F30 !important;
+  background: #F10000 !important;
   padding: 12px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .owl-theme .owl-controls .owl-nav [class*="owl-"]:hover i, .owl-theme .owl-controls .owl-nav [class*="owl-"]:focus i {
-  background: #F30 !important;
+  background: #F10000 !important;
 }
 
 .owl-theme .owl-dots {
@@ -1841,7 +1841,7 @@ form label {
 .owl-theme .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
-  background: #F30;
+  background: #F10000;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1849,12 +1849,12 @@ form label {
 }
 .owl-theme .owl-dots .owl-dot span:hover {
   background: none;
-  border: 2px solid #F30;
+  border: 2px solid #F10000;
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: none;
-  border: 2px solid #F30;
+  border: 2px solid #F10000;
 }
 
 #ubea-faq {
@@ -1905,7 +1905,7 @@ form label {
   transform: rotate(0deg);
 }
 .ubea-accordion.active h3 {
-  color: #F30;
+  color: #F10000;
 }
 
 #ubea-contact h3 {
@@ -2054,7 +2054,7 @@ form label {
   color: #cccccc !important;
 }
 #ubea-about .feature-left h3 {
-  color: #F30;
+  color: #F10000;
   font-size: 22px;
 }
 
