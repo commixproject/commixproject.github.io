@@ -27,7 +27,7 @@ class Footer extends HTMLElement {
                   by
                   <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">
                     Anastasios Stasinopoulos
-                  </a>.
+                    </a>.
                   <br>
 
                   <a href="https://github.com/commixproject/" target="_blank" rel="noopener noreferrer">
