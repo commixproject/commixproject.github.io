@@ -71,7 +71,7 @@ class Header extends HTMLElement {
                    style="margin:auto;width:70%;max-width:90%">
              <br>
              <h4 class="modal-title">
-                From screen to street!
+                From screen to street.
               </h4>
              <h3 class="modal-title">
                 Print it. Stick it. Spread it.
