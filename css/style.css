@@ -113,12 +113,35 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
   }
 }
+.ubea-nav .ubea-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 0 40px;
+}
+@media screen and (max-width: 768px) {
+  .ubea-nav .ubea-nav-inner {
+    padding: 0 20px;
+  }
+}
 .ubea-nav #ubea-logo {
   font-size: 0px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
+}
+.ubea-nav #ubea-logo img {
+  display: block;
+  width: 220px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .ubea-nav #ubea-logo img {
+    width: 180px;
+  }
 }
 .ubea-nav #ubea-logo em {
   color: #F10000;
@@ -134,7 +157,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .ubea-nav ul {
   padding: 0;
-  margin: 2px 0 0 0;
+  margin: 0;
 }
 .ubea-nav ul li {
   padding: 0;
@@ -143,14 +166,18 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline;
 }
 .ubea-nav ul li a {
-  font-size: 16px;
-  padding: 30px 10px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  padding: 30px 12px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .ubea-nav ul li a:hover, .ubea-nav ul li a:focus, .ubea-nav ul li a:active {
   color: #F10000;
+}
+.ubea-nav .main-nav ul li:last-child a {
+  padding-right: 0;
 }
 .ubea-nav ul li.has-dropdown {
   position: relative;
@@ -1023,6 +1050,9 @@ form label {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+#ubea-offcanvas .nav-divider {
+  display: none;
 }
 #ubea-offcanvas ul li > ul {
   padding-left: 20px;
