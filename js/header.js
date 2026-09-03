@@ -10,7 +10,7 @@ class Header extends HTMLElement {
               <div id="ubea-logo">
                 <a href="/" aria-label="Commix Homepage">
                   <img
-                    src="https://commixproject.com/images/logo.png"
+                    src="/images/logo.png"
                     width="220"
                     height="45"
                     alt="Commix Project Logo"
@@ -63,7 +63,7 @@ class Header extends HTMLElement {
               </button>
             </div>
             <div class="modal-body text-center" style="padding:20px;">
-              <img src="https://commixproject.com/images/official_commix_sticker.png"
+              <img src="/images/official_commix_sticker.png"
                    class="img-responsive"
                    style="margin:auto;width:70%;max-width:90%">
              <br>

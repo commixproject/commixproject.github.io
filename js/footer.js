@@ -45,7 +45,7 @@ class Footer extends HTMLElement {
                 <a href="https://www.obrela.com?utm_source=commixproject&utm_medium=banner&utm_campaign=clickthrough"
                    target="_blank"
                    rel="sponsored noopener noreferrer">
-                  <img src="https://commixproject.com/images/OSI_Logo_SPONSORED.png"
+                  <img src="/images/OSI_Logo_SPONSORED.png"
                        width="250"
                        alt="Obrela"
                        loading="lazy">
