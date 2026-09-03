@@ -11,8 +11,8 @@ class Header extends HTMLElement {
                 <a href="/" aria-label="Commix Homepage">
                   <img
                     src="/images/logo.png"
-                    width="220"
-                    height="45"
+                    width="340"
+                    height="70"
                     alt="Commix Project Logo"
                   >
                 </a>

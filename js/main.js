@@ -84,7 +84,7 @@
 
 				if ($('[data-section="' + section + '"]').length) {
 					$('html, body').animate({
-						scrollTop: $('[data-section="' + section + '"]').offset().top - 55
+						scrollTop: $('[data-section="' + section + '"]').offset().top - $('.ubea-nav').outerHeight()
 					}, 500, 'easeInOutExpo');
 				}
 
