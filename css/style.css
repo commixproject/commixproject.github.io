@@ -127,17 +127,17 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .ubea-nav #ubea-logo img {
   display: block;
-  width: 340px;
+  width: 300px;
   height: auto;
 }
 @media screen and (max-width: 992px) {
   .ubea-nav #ubea-logo img {
-    width: 260px;
+    width: 240px;
   }
 }
 @media screen and (max-width: 768px) {
   .ubea-nav #ubea-logo img {
-    width: 200px;
+    width: 190px;
   }
 }
 .ubea-nav #ubea-logo em {
@@ -228,6 +228,23 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .pull-left{
   padding: 2%
+}
+
+@media screen and (max-width: 768px) {
+  #ubea-footer {
+    padding: 1.5em 0;
+  }
+  #ubea-footer .copyright .pull-right {
+    float: none !important;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 0;
+  }
+  /* the spacer breaks are desktop layout: on phones they only add dead space */
+  #ubea-footer .copyright p > br:first-child,
+  #ubea-footer .copyright small > br:first-child {
+    display: none;
+  }
 }
 
 #ubea-offcanvas {
@@ -407,7 +424,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .ubea-nav-toggle {
   position: fixed;
   right: 0px;
-  top: 10px;
+  top: 14px;
   z-index: 21;
   padding: 6px 0 0 0;
   display: block;
@@ -481,7 +498,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #ubea-hero {
-  min-height: 700px;
+  min-height: 460px;
   background: #000 url(../images/loader.gif) no-repeat center center;
 }
 #ubea-hero .btn {
@@ -508,7 +525,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 700px;
+  min-height: 460px;
   position: relative;
 }
 #ubea-hero .flexslider .slides li .overlay {
@@ -568,7 +585,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #ubea-hero .flexslider .slider-text {
   display: table;
   opacity: 0;
-  min-height: 700px;
+  min-height: 460px;
 }
 @media screen and (max-width: 991px) {
   /* below the md breakpoint the column has no width of its own, and a table
@@ -580,7 +597,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #ubea-hero .flexslider .slider-text > .slider-text-inner {
   display: table-cell;
   vertical-align: middle;
-  min-height: 700px;
+  min-height: 460px;
 }
 #ubea-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 60px;

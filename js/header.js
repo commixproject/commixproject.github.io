@@ -10,9 +10,9 @@ class Header extends HTMLElement {
               <div id="ubea-logo">
                 <a href="/" aria-label="Commix Homepage">
                   <img
-                    src="/images/logo.png"
-                    width="340"
-                    height="70"
+                    src="/images/logo-header.png"
+                    width="2080"
+                    height="350"
                     alt="Commix Project Logo"
                   >
                 </a>

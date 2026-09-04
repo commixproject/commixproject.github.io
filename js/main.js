@@ -29,16 +29,24 @@
 		}
 	};
 
+	// the hero is a banner, not a landing page: keep it short of the full viewport
+	var HERO_RATIO = 0.72, HERO_MIN = 460;
+
+	var heroHeight = function () {
+		return Math.max(HERO_MIN, Math.round($(window).height() * HERO_RATIO));
+	};
+
 	/* =========================
 	   FULL HEIGHT (SAFE)
 	   ========================= */
 	var fullHeight = function() {
 
 		var setHeight = function () {
+			var height = heroHeight();
 			if (!isMobile.any()) {
-				$('.js-fullheight').css('height', $(window).height());
+				$('.js-fullheight').css('height', height);
 			} else {
-				$('.js-fullheight').css('min-height', $(window).height());
+				$('.js-fullheight').css('min-height', height);
 			}
 		};
 
@@ -170,7 +178,7 @@
 			if (!$flex.length) return;
 
 			var setHero = function () {
-				var h = $(window).height();
+				var h = heroHeight();
 				$('#ubea-hero').css('height', h);
 				$('#ubea-hero .flexslider').css('height', h);
 				$('#ubea-hero .slides > li').css('height', h);
