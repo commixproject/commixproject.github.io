@@ -1,5 +1,5 @@
 ;(function () {
-	
+
 	'use strict';
 
 	var isMobile = {
@@ -63,15 +63,6 @@
 	};
 
 	/* =========================
-	   HEADER FIX (SAFE HEIGHT)
-	   ========================= */
-	var header = function() {
-		if ($('.ubea-nav').length) {
-			$('.header-fixed').css('padding-top', $('.ubea-nav').outerHeight());
-		}
-	};
-
-	/* =========================
 	   NAVIGATION
 	   ========================= */
 	var navigation = function() {
@@ -108,9 +99,8 @@
 		}
 
 		var clone1 = $('.menu-1 > ul').clone();
-		var clone2 = $('.menu-2 > ul').clone();
 
-		$('#ubea-offcanvas').empty().append(clone1).append(clone2);
+		$('#ubea-offcanvas').empty().append(clone1);
 	};
 
 	/* =========================
@@ -193,6 +183,8 @@
 				slideshowSpeed: 5000,
 				directionNav: true,
 				smoothHeight: false,
+				prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+				nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
 
 				start: function(){
 					$('.slider-text').addClass('animated fadeInUp');
@@ -207,61 +199,10 @@
 				}
 			});
 
-			$(window).on('resize orientationchange', function(){
-				setHero();
-				$flex.resize();
-			});
+			// flexslider rebinds its own metrics on resize: only the height is ours
+			$(window).on('resize orientationchange', setHero);
 
 		}, 150);
-
-	};
-
-	/* =========================
-	   DROPDOWN
-	   ========================= */
-	var dropdown = function() {
-
-		$('.has-dropdown').hover(
-			function(){
-				$(this).find('.dropdown')
-					.css('display','block')
-					.addClass('animated-fast fadeInUpMenu');
-			},
-			function(){
-				$(this).find('.dropdown')
-					.css('display','none')
-					.removeClass('animated-fast fadeInUpMenu');
-			}
-		);
-
-	};
-
-	/* =========================
-	   OWL CAROUSEL
-	   ========================= */
-	var owlCarousel = function(){
-
-		$('.owl-carousel-carousel').owlCarousel({
-			items: 3,
-			loop: true,
-			margin: 20,
-			nav: true,
-			dots: true,
-			smartSpeed: 800,
-			responsive:{
-				0:{items:1},
-				600:{items:2},
-				1000:{items:3}
-			}
-		});
-
-		$('.owl-carousel-fullwidth').owlCarousel({
-			items: 1,
-			loop: true,
-			nav: true,
-			dots: true,
-			smartSpeed: 800
-		});
 
 	};
 
@@ -289,74 +230,18 @@
 	};
 
 	/* =========================
-	   COUNTER
-	   ========================= */
-	var counterWayPoint = function() {
-		if ($('#ubea-counter').length) {
-			$('#ubea-counter').waypoint(function(direction){
-				if (direction === 'down' && !$(this.element).hasClass('animated')) {
-					$('.js-counter').countTo();
-					$(this.element).addClass('animated');
-				}
-			}, { offset: '90%' });
-		}
-	};
-
-	/* =========================
-	   ACCORDION
-	   ========================= */
-	var accordion = function() {
-		$('.ubea-accordion-heading').on('click', function(e){
-			e.preventDefault();
-
-			var $acc = $(this).closest('.ubea-accordion');
-
-			$acc.find('.ubea-accordion-content').slideToggle(300);
-			$acc.toggleClass('active');
-		});
-	};
-
-	/* =========================
-	   🔥 MODAL FIX (IMPORTANT)
-	   ========================= */
-	var bindSpreadModal = function () {
-
-		$('body').on('click', '#spreadTrigger', function(e){
-			e.preventDefault();
-
-			var $modal = $('#spreadModal');
-
-			if (!$modal.length) return;
-
-			// Bootstrap modal if exists
-			if (typeof $.fn.modal === 'function') {
-				$modal.modal('show');
-			} else {
-				$modal.fadeIn(200).addClass('open');
-			}
-		});
-
-	};
-
-	/* =========================
 	   INIT
 	   ========================= */
 	$(function(){
 		fullHeight();
 		mobileMenuOutsideClick();
-		header();
 		navigation();
 		offcanvasMenu();
 		burgerMenu();
 		navigationSection();
 		sliderMain();
-		dropdown();
-		owlCarousel();
 		goToTop();
 		loaderPage();
-		counterWayPoint();
-		accordion();
-		bindSpreadModal();
 	});
 
 }());
