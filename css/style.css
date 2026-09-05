@@ -220,30 +220,75 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #1a1a1a;
   margin-bottom: 10px;
 }
+.feature-left .feature-copy p {
+  text-align: justify;
+  /* Justified text pulls words apart on short lines; hyphenation keeps the gaps down. */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 
 
 #ubea-footer .copyright .block {
   display: block;
 }
 
-.pull-left{
-  padding: 2%
+/* The footer's two columns are different heights - a couple of lines of text against a 74px logo -
+   so they are centred against each other on one flex line rather than floated, which left the text
+   sitting higher than the image beside it. Below the tablet breakpoint the same line stacks. */
+#ubea-footer {
+  padding: 14px 0;
+}
+#ubea-footer .copyright .col-md-12 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+#ubea-footer .copyright .pull-left,
+#ubea-footer .copyright .pull-right {
+  float: none !important;
+  padding: 0;
+  margin-bottom: 0;
+}
+/* The spacer breaks were doing the job the layout now does, at every width. */
+#ubea-footer .copyright p > br:first-child,
+#ubea-footer .copyright small > br:first-child {
+  display: none;
+}
+/* Nearer the 15px body copy: at 85% the footer read small against the logo it sits next to. */
+#ubea-footer .copyright small {
+  font-size: 14px;
+  /* Evens the line lengths, so a wrapped line does not leave one word stranded under it. */
+  text-wrap: balance;
 }
 
 @media screen and (max-width: 768px) {
-  #ubea-footer {
-    padding: 1.5em 0;
-  }
-  #ubea-footer .copyright .pull-right {
-    float: none !important;
+  #ubea-footer .copyright .col-md-12 {
+    flex-direction: column;
     text-align: center;
-    padding: 2%;
-    margin-bottom: 0;
+    gap: 26px;
   }
-  /* the spacer breaks are desktop layout: on phones they only add dead space */
-  #ubea-footer .copyright p > br:first-child,
-  #ubea-footer .copyright small > br:first-child {
-    display: none;
+  #ubea-footer {
+    padding: 18px 0 24px;
+  }
+  #ubea-footer .copyright .pull-right img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* The scroll-to-top button is fixed 20px off the bottom right and 50px square, so a centred logo
+   only reaches it once the viewport is narrow enough for the two to share that column. Narrowing
+   the logo there clears it, rather than padding the whole footer out on every small screen. */
+@media screen and (max-width: 420px) {
+  #ubea-footer .copyright .pull-right img {
+    max-width: 220px;
+  }
+  /* The author line needs 381px at 14px and only has 345px on a 375px phone, so it wrapped mid
+     sentence. It clears at 11px with room to spare; wider screens keep the full size. */
+  #ubea-footer .copyright small {
+    font-size: 11px;
   }
 }
 
@@ -499,7 +544,9 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #ubea-hero {
   min-height: 460px;
-  background: #000 url(../images/loader.gif) no-repeat center center;
+  /* Plain black: the slides carry their own image, and a spinner behind them showed through every
+     cross-fade as the outgoing and incoming slide were both part-transparent. */
+  background: #000;
 }
 #ubea-hero .btn {
   font-size: 24px;
@@ -598,6 +645,14 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table-cell;
   vertical-align: middle;
   min-height: 460px;
+  /* the fixed nav covers the top of the hero, so true centring reads high:
+     offset by twice the nav height to sit in the middle of what is visible */
+  padding-top: 90px;
+}
+@media screen and (max-width: 768px) {
+  #ubea-hero .flexslider .slider-text > .slider-text-inner {
+    padding-top: 60px;
+  }
 }
 #ubea-hero .flexslider .slider-text > .slider-text-inner h2 {
   font-size: 60px;
@@ -622,6 +677,23 @@ h1, h2, h3, h4, h5, h6, figure {
 .ubea-section-overflow {
   overflow: hidden;
   position: relative;
+}
+
+/* the icon indents each column by another 15%, which pulls both blocks of copy
+   toward the middle: give the row more room than the default container */
+@media screen and (min-width: 1200px) {
+  #ubea-about .ubea-container {
+    max-width: 1320px;
+  }
+}
+/* and keep the two columns clear of each other rather than meeting mid-page */
+@media screen and (min-width: 992px) {
+  #ubea-about > .ubea-container > .row > .col-md-6:first-child {
+    padding-right: 45px;
+  }
+  #ubea-about > .ubea-container > .row > .col-md-6:last-child {
+    padding-left: 45px;
+  }
 }
 
 #ubea-about .feature-left .icon i {

@@ -189,21 +189,22 @@
 			$flex.flexslider({
 				animation: "fade",
 				slideshowSpeed: 5000,
+				animationSpeed: 800,
 				directionNav: true,
 				smoothHeight: false,
 				prevText: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
 				nextText: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
 
 				start: function(){
-					$('.slider-text').addClass('animated fadeInUp');
+					$('.slider-text').addClass('animated fadeIn');
 				},
 
 				before: function(){
-					$('.slider-text').removeClass('animated fadeInUp');
+					$('.slider-text').removeClass('animated fadeIn');
 				},
 
 				after: function(){
-					$('.slider-text').addClass('animated fadeInUp');
+					$('.slider-text').addClass('animated fadeIn');
 				}
 			});
 

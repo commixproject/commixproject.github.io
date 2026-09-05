@@ -25,19 +25,13 @@ class Footer extends HTMLElement {
                   and
                   <i class="fa fa-heart text-danger" aria-hidden="true"></i>
                   by
-                  <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">
-                    Anastasios Stasinopoulos
-                    </a>.
+                  <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">Anastasios Stasinopoulos</a>.
                   <br>
-
-                  <a href="https://github.com/commixproject/" target="_blank" rel="noopener noreferrer">
-                    Commix Project
-                  </a>
-                  is licensed under the
-                  <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">
-                    GPLv3 License
-                  </a>
-                  © 2014-2026.
+                  <a href="https://github.com/commixproject/" target="_blank" rel="noopener noreferrer">Commix Project</a>
+                  is
+                  <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a>
+                  licensed
+                  &copy;&nbsp;2014-2026.
                 </small>
               </p>
               <p class="pull-right">
