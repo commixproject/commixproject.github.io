@@ -1,3 +1,53 @@
+(function(){
+	"use strict";
+
+	/* Shared by main.js and news.js. Anything reaching the DOM from the GitHub API goes through
+	   these: the API is trusted, but a value that ever carried a quote would otherwise break out
+	   of the attribute it was written into. */
+	var GITHUB_API = "https://api.github.com/repos/commixproject/commix";
+
+	function escapeHtml(value) {
+		return String(value == null ? "" : value)
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;")
+			.replace(/'/g, "&#39;");
+	}
+
+	/* Only an absolute http(s) URL is ever written into an href or src, so a "javascript:" or
+	   "data:" value could not be introduced by a compromised or spoofed response. */
+	function safeUrl(value) {
+		var url = String(value == null ? "" : value);
+		return /^https?:\/\//i.test(url) ? escapeHtml(url) : "#";
+	}
+
+	function formatDate(iso) {
+		var date = new Date(iso);
+		if (isNaN(date)) return "";
+		return date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+	}
+
+	function formatMonth(iso) {
+		var date = new Date(iso);
+		if (isNaN(date)) return "";
+		return date.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+	}
+
+	function version(release) {
+		return String(release.tag_name || release.name || "").replace(/^v/, "");
+	}
+
+	window.commix = {
+		api: GITHUB_API,
+		escapeHtml: escapeHtml,
+		safeUrl: safeUrl,
+		formatDate: formatDate,
+		formatMonth: formatMonth,
+		version: version
+	};
+}());
+
 ;(function () {
 
 	'use strict';
@@ -80,15 +130,20 @@
 			function(event){
 
 				var section = $(this).data('nav-section');
-
-				if ($('[data-section="' + section + '"]').length) {
-					$('html, body').animate({
-						scrollTop: $('[data-section="' + section + '"]').offset().top - $('.ubea-nav').outerHeight()
-					}, 500, 'easeInOutExpo');
-				}
+				var $target = $('[data-section="' + section + '"]');
 
 				$('body').removeClass('offcanvas');
 				$('.js-ubea-nav-toggle').removeClass('active');
+
+				/* Only an in-page jump is ours to cancel: items such as MAIN and NEWS point at
+				   another page, and swallowing their click left them dead. */
+				if (!$target.length) {
+					return;
+				}
+
+				$('html, body').animate({
+					scrollTop: $target.offset().top - $('.ubea-nav').outerHeight()
+				}, 500, 'easeInOutExpo');
 
 				event.preventDefault();
 			}
@@ -234,6 +289,34 @@
 	/* =========================
 	   LOADER
 	   ========================= */
+	// Refresh the repository counters from GitHub, so the band does not go stale between deploys.
+	// The markup ships with the last known values, and anything that fails here simply leaves them.
+	var repoStats = function() {
+		var fields = document.querySelectorAll('#ubea-stats [data-stat]');
+		if (!fields.length || !window.fetch) return;
+
+		var compact = function(n) {
+			return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n);
+		};
+
+		fetch(commix.api)
+			.then(function(r) { return r.ok ? r.json() : null; })
+			.then(function(d) {
+				if (!d) return;
+				var counts = {
+					stars: d.stargazers_count,
+					forks: d.forks_count,
+					watching: d.subscribers_count
+				};
+				Array.prototype.forEach.call(fields, function(el) {
+					var v = counts[el.getAttribute('data-stat')];
+					if (typeof v === 'number') el.textContent = compact(v);
+				});
+			})
+			.catch(function() { /* keep the values already in the markup */ });
+	};
+
+	/* The current version, as one more pill beside the repository counts. */
 	var loaderPage = function() {
 		$(".ubea-loader").fadeOut("slow");
 	};
@@ -251,6 +334,7 @@
 		sliderMain();
 		goToTop();
 		loaderPage();
+		repoStats();
 	});
 
 }());

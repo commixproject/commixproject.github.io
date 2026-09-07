@@ -20,18 +20,16 @@ class Footer extends HTMLElement {
               <p class="pull-left">
                 <small class="block">
                   <br>
-                  Made in Greece with
-                  <i class="fa fa-coffee text-muted" aria-hidden="true"></i>
-                  and
-                  <i class="fa fa-heart text-danger" aria-hidden="true"></i>
-                  by
-                  <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">Anastasios Stasinopoulos</a>.
-                  <br>
                   <a href="https://github.com/commixproject/" target="_blank" rel="noopener noreferrer">Commix Project</a>
                   is
-                  <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a>
-                  licensed
-                  &copy;&nbsp;2014-2026.
+                  <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a>-licensed<span class="nowrap"> &copy;&nbsp;2014-2026.</span>
+                  <br>
+                  Made in Greece with
+                  <i class="fa fa-heart text-danger" aria-hidden="true"></i>
+                  and
+                  <i class="fa fa-coffee text-muted" aria-hidden="true"></i>
+                  by
+                  <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">Anastasios Stasinopoulos</a>.
                 </small>
               </p>
               <p class="pull-right">
@@ -39,7 +37,7 @@ class Footer extends HTMLElement {
                 <a href="https://www.obrela.com?utm_source=commixproject&utm_medium=banner&utm_campaign=clickthrough"
                    target="_blank"
                    rel="sponsored noopener noreferrer">
-                  <img src="/images/OSI_Logo_SPONSORED.png"
+                  <img src="/images/OSI_Logo_SPONSORED-centered.png"
                        width="250"
                        alt="Obrela"
                        loading="lazy">

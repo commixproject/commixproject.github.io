@@ -9,18 +9,21 @@ Based on uBeasa template (developed by freshDesignweb).
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.</title>
-  <meta name="description" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
+  <title>Page not found | Commix Project</title>
+  <meta name="description" content="Open-source automation for detecting and exploiting command and code injection flaws, and taking control of the underlying operating system.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Page not found | Commix Project">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://commixproject.com">
-  <meta property="og:description" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
+  <meta property="og:description" content="Open-source automation for detecting and exploiting command and code injection flaws, and taking control of the underlying operating system.">
   <link rel="shortcut icon" type="image/png" href="favicon.ico">
   <link rel="apple-touch-icon" href="/images/logo.png">
-  <link href='https://fonts.googleapis.com/css?family=Exo 2' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Exo%202" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous" referrerpolicy="no-referrer">
   <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -31,44 +34,40 @@ Based on uBeasa template (developed by freshDesignweb).
     <!-- Flexslider -->
     <link rel="stylesheet" href="/css/flexslider.css">
     <!-- Theme style  -->
-    <link rel="stylesheet" href="/css/style.css?v=20260905">
+    <link rel="stylesheet" href="/css/style.css?v=20260911h">
     <!-- jQuery Easing -->
     <script src="/js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Waypoints -->
     <script src="/js/jquery.waypoints.min.js"></script>
     <!-- Flexslider -->
     <script src="/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
-    <script src="/js/main.js?v=20260905"></script>
-    <!-- Header / Footer -->
-    <script src="/js/header.js?v=20260905" type="text/javascript" defer></script>
-    <script src="/js/footer.js?v=20260905" type="text/javascript" defer></script>
+    <script src="/js/main.js?v=20260911h"></script>
+    <!-- Header / Hero / Footer -->
+    <script src="/js/hero.js?v=20260911h" type="text/javascript" defer></script>
+    <script src="/js/header.js?v=20260911h" type="text/javascript" defer></script>
+    <script src="/js/footer.js?v=20260911h" type="text/javascript" defer></script>
     </head>
-    <body>
+    <body class="page-404">
 
-    <header-component></header-component>   
+    <header-component></header-component>
 
-    <div id="ubea-hero" class="js-fullheight"  data-section="home">
-        <div class="flexslider js-fullheight">
-            <ul class="slides">
-                <li style="background-image: url(/images/background.png);">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <h2>Oops! Page Not Found</h2>
-                                <p><a href="/" class="btn btn-primary btn-lg"><i class="fa fa-home"></i> Go home</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+    <hero-component></hero-component>
+
+    <div class="ubea-section-overflow">
+        <div class="ubea-section" id="ubea-notfound">
+            <div class="ubea-container">
+                <header class="section-intro">
+                    <h2>Oops! Page not found.</h2>
+                    <p>Nothing is served at this address. Try the front page, or the wiki if you were after the documentation.</p>
+                </header>
+            </div>
         </div>
     </div>
 
-    <footer-component></footer-component>   
+    <footer-component></footer-component>
 
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>

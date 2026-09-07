@@ -8,7 +8,7 @@ Based on uBeasa template (developed by freshDesignweb).
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.</title>
-    <meta name="description" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
+    <meta name="description" content="Open-source automation for detecting and exploiting command and code injection flaws, and taking control of the underlying operating system.">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="theme-color" content="#111111">
@@ -16,12 +16,12 @@ Based on uBeasa template (developed by freshDesignweb).
     <meta property="og:title" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://commixproject.com">
-    <meta property="og:description" content="Commix Project | Automated All-in-One OS Command Injection Exploitation Tool.">
+    <meta property="og:description" content="Open-source automation for detecting and exploiting command and code injection flaws, and taking control of the underlying operating system.">
     <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Exo%202" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
 
@@ -30,81 +30,51 @@ Based on uBeasa template (developed by freshDesignweb).
     <!-- Flexslider -->
     <link rel="stylesheet" href="/css/flexslider.css">
     <!-- Theme style  -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=20260911h">
     <!-- jQuery Easing -->
     <script src="/js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Waypoints -->
     <script src="/js/jquery.waypoints.min.js"></script>
     <!-- Flexslider -->
     <script src="/js/jquery.flexslider-min.js"></script>
     <!-- Main -->
-    <script src="/js/main.js"></script>
-    <!-- Header / Footer -->
-    <script src="/js/header.js" type="text/javascript" defer></script>
-    <script src="/js/footer.js" type="text/javascript" defer></script>
+    <script src="/js/main.js?v=20260911h"></script>
+    <!-- Header / Hero / Footer -->
+    <script src="/js/hero.js?v=20260911h" type="text/javascript" defer></script>
+    <script src="/js/header.js?v=20260911h" type="text/javascript" defer></script>
+    <script src="/js/footer.js?v=20260911h" type="text/javascript" defer></script>
 </head>
 
 <body>
 
     <header-component></header-component>
 
-    <div id="ubea-hero" class="js-fullheight" data-section="home">
-        <div class="flexslider js-fullheight">
-            <ul class="slides">
-                <li style="background-image: url(/images/background.png);">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <h2>Get the latest release.</h2>
-                                <p><a href="https://github.com/commixproject/commix" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fab fa-github"></i> View the source.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(/images/background.png);">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <h2>Stay in the loop.</h2>
-                                <p><a href="https://twitter.com/commixproject" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fa-brands fa-x-twitter"></i> Follow the project.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li style="background-image: url(/images/background.png);">
-                    <div class="overlay"></div>
-                    <div class="container">
-                        <div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
-                            <div class="slider-text-inner">
-                                <h2>Practice before you target.</h2>
-                                <p><a href="https://hub.docker.com/r/commixproject/commix-testbed" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"><i class="fab fa-docker"></i> Pull the Docker image.</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <hero-component></hero-component>
+
+
     <div class="ubea-section-overflow" >
         <div class="ubea-section" id="ubea-about" data-section="about">
-            <br><br>
             <div class="ubea-container">
+
+                <header class="section-intro">
+                    <h2>A shell is the only proof that counts.</h2>
+                    <p>While most scanners guess which parameters are exploitable, commix confirms by actively exploiting them.</p>
+                </header>
+
                 <div class="row">
-                    <div class="col-md-6 animate-box fadeIn animated-fast" data-animate-effect="fadeIn" >
+                    <div class="col-md-6">
                         <div class="row">
 
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-bolt"></i>
+                                        <i class="fa-solid fa-terminal"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Automated.</h3>
-                                        <p>End-to-end automation of <a href="https://owasp.org/www-community/attacks/Command_Injection" target="_blank">command injection</a> detection, exploitation, and post-exploitation.</p>
+                                        <h3>End-to-end.</h3>
+                                        <p>Detection is where most scanners stop and your afternoon starts. Parameters, cookies and headers are probed until one of them executes, and that <a href="https://owasp.org/www-community/attacks/Command_Injection" target="_blank" rel="noopener noreferrer">injection point</a> becomes an interactive <a href="https://github.com/commixproject/commix/wiki/Getting-shells" target="_blank" rel="noopener noreferrer">shell</a> for post-exploitation.</p>
                                     </div>
                                 </div>
                             </div>
@@ -112,11 +82,11 @@ Based on uBeasa template (developed by freshDesignweb).
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-toolbox"></i>
+                                        <i class="fa-solid fa-mask"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Powerful.</h3>
-                                        <p>Advanced <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank">exploitation techniques</a>, including <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank">filter bypass</a> methods, file interaction, and environment enumeration.</p>
+                                        <h3>Evasive.</h3>
+                                        <p>Access denied is not a verdict. Multiple <a href="https://github.com/commixproject/commix/wiki/Filters-bypass-examples" target="_blank" rel="noopener noreferrer">tamper scripts</a> rebuild the payload: encoding, casing, whitespace, shell substitution. Chain them until the WAF sees nothing worth blocking. It logs the request; you get a shell.</p>
                                     </div>
                                 </div>
                             </div>
@@ -124,11 +94,23 @@ Based on uBeasa template (developed by freshDesignweb).
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-cogs"></i>
+                                        <i class="fa-solid fa-folder-tree"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Customizable.</h3>
-                                        <p>Extensible <a href="https://github.com/commixproject/commix/wiki/Module-Development" target="_blank">modular </a> for custom payloads, injection logic, and exploitation modules.</p>
+                                        <h3>Thorough.</h3>
+                                        <p>Getting a shell is only the start. <a href="https://github.com/commixproject/commix/wiki/Usage#file-access-options" target="_blank" rel="noopener noreferrer">Read and write files</a>, <a href="https://github.com/commixproject/commix/wiki/Usage#enumeration-options" target="_blank" rel="noopener noreferrer">enumerate</a> users, password hashes, privileges and system info, or take the lot in one pass. Whatever the web user reaches, you reach.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="feature-left">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-cubes"></i>
+                                    </span>
+                                    <div class="feature-copy">
+                                        <h3>Modular.</h3>
+                                        <p>Write your own <a href="https://github.com/commixproject/commix/wiki/Module-development" target="_blank" rel="noopener noreferrer">modules</a> and bend the tool to the job in front of you. The core is already there: a module is plain Python that reuses it, not a framework to learn.</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,16 +118,17 @@ Based on uBeasa template (developed by freshDesignweb).
                         </div>
                     </div>
 
-                    <div class="col-md-6 animate-box fadeIn animated-fast" data-animate-effect="fadeIn" >
+                    <div class="col-md-6">
                         <div class="row">
+
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-sliders-h"></i>
+                                        <i class="fa-solid fa-fingerprint"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Flexible.</h3>
-                                        <p>Built for penetration testing pipelines with configurable integration and <a href="https://github.com/commixproject/commix/wiki/Getting-shells" target="_blank">shell acquisition</a> support.</p>
+                                        <h3>Fluent.</h3>
+                                        <p>An injection point is not enough. An application hosted on Windows will never fall to a payload designed for Linux. That is why an active fingerprint comes first, and every payload is shaped to the operating system it identifies.</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,11 +136,11 @@ Based on uBeasa template (developed by freshDesignweb).
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-desktop"></i>
+                                        <i class="fa-solid fa-satellite-dish"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Cross-Platform.</h3>
-                                        <p><a href="https://www.python.org/downloads/" target="_blank">Python-based</a> tool compatible with Linux, macOS, and Windows with minimal dependencies.</p>
+                                        <h3>Relentless.</h3>
+                                        <p>Nothing coming back does not mean nothing ran. When the output comes back, <a href="https://github.com/commixproject/commix/wiki/Techniques#results-based-injections" target="_blank" rel="noopener noreferrer">results-based techniques</a> read it off; when it does not, <a href="https://github.com/commixproject/commix/wiki/Techniques#blind-injections" target="_blank" rel="noopener noreferrer">time-related ones</a> clock it out of the delay; out-of-band callbacks reach <a href="https://github.com/projectdiscovery/interactsh" target="_blank" rel="noopener noreferrer">interactsh</a> over HTTP or plain DNS.</p>
                                     </div>
                                 </div>
                             </div>
@@ -165,11 +148,23 @@ Based on uBeasa template (developed by freshDesignweb).
                             <div class="col-md-12">
                                 <div class="feature-left">
                                     <span class="icon">
-                                        <i class="fa fa-code-branch"></i>
+                                        <i class="fa-solid fa-scale-balanced"></i>
                                     </span>
                                     <div class="feature-copy">
-                                        <h3>Open Source.</h3>
-                                        <p>Released under the <a href="https://github.com/commixproject/commix/wiki/License" target="_blank">GNU GPLv3 license</a> and actively maintained for the security community.</p>
+                                        <h3>Provable.</h3>
+                                        <p>A finding you have to manually prove is half a finding. Every supported <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank" rel="noopener noreferrer">technique</a> confirms by executing, and every injection point is re-tested for false positives before it is reported.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="feature-left">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-code-branch"></i>
+                                    </span>
+                                    <div class="feature-copy">
+                                        <h3>Open-source.</h3>
+                                        <p>This software is free and open source. There is no pro edition to upsell you. It ships under <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a> and everything you need is in the repo. The git log goes back to 2014.</p>
                                     </div>
                                 </div>
                             </div>

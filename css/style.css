@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
 }
 @media screen and (max-width: 768px) {
-  .ubea-nav .menu-1, .ubea-nav .menu-2 {
+  .ubea-nav .menu-1 {
     display: none;
   }
 }
@@ -173,13 +173,39 @@ h1, h2, h3, h4, h5, h6, figure {
 .ubea-nav ul li a:hover, .ubea-nav ul li a:focus, .ubea-nav ul li a:active {
   color: #F10000;
 }
+/* The navigation items echo the stats pills under the hero - same rounded chip, in a light key for
+   the white bar - so the dividers between them are no longer doing any work. */
+.ubea-nav .main-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.ubea-nav .main-nav ul li {
+  display: block;
+}
+.ubea-nav .main-nav ul li a {
+  display: block;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  background: #fafafa;
+  white-space: nowrap;
+}
 .ubea-nav .main-nav ul li:last-child a {
-  padding-right: 0;
+  padding-right: 14px;
+}
+.ubea-nav .main-nav ul li a:hover,
+.ubea-nav .main-nav ul li a:focus,
+.ubea-nav .main-nav ul li a:active,
+.ubea-nav .main-nav ul li.active > a {
+  border-color: #F10000;
+  background: #fff;
 }
 .ubea-nav ul li.active > a {
   color: #F10000 !important;
 }
-
 
 .ubea-section,
 #ubea-footer {
@@ -228,9 +254,12 @@ h1, h2, h3, h4, h5, h6, figure {
   hyphens: auto;
 }
 
-
 #ubea-footer .copyright .block {
   display: block;
+}
+/* The hyphen in the year range is a break opportunity, and on a phone it stranded "2026." */
+#ubea-footer .copyright .nowrap {
+  white-space: nowrap;
 }
 
 /* The footer's two columns are different heights - a couple of lines of text against a 74px logo -
@@ -292,6 +321,238 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+#ubea-notfound {
+  padding: 54px 0 20px;
+}
+
+/* The not-found page is short, so the footer would otherwise land mid-viewport with white beneath
+   it. Column layout pins the footer to the bottom and lets the section above take up the slack. */
+.page-404 {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+}
+.page-404 .ubea-section-overflow {
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+.page-404 footer-component {
+  margin-top: auto;
+}
+
+/* ------------------------------------------------------------------ news page */
+
+#ubea-news {
+  padding: 46px 0 10px;
+}
+.news-list {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.news-item {
+  padding: 0 0 34px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid #ececec;
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+/* A title line, then who shipped it and when. */
+.news-head {
+  margin-bottom: 18px;
+}
+.news-head h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.1;
+  color: #F10000;
+}
+.news-head h2 a {
+  color: inherit;
+}
+.news-head h2 a:hover,
+.news-head h2 a:focus {
+  color: #ff6540;
+}
+.news-meta {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #999;
+}
+.news-sep {
+  color: #ccc;
+}
+.news-pre {
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 12px;
+  color: #999;
+}
+/* The avatar is round, as it is everywhere else GitHub shows a person. */
+.news-author {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+}
+.news-author:hover,
+.news-author:focus {
+  color: #F10000;
+}
+.news-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ececec;
+  background: #f5f5f5;
+}
+
+.news-changes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.news-changes li {
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 1.65;
+}
+.news-changes code {
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+/* The label is how a changelog gets scanned, so it reads as a tag rather than as prose. */
+.news-tag {
+  display: inline-block;
+  min-width: 74px;
+  margin-right: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #999;
+  background: #fafafa;
+  vertical-align: 2px;
+}
+/* Each kind of change gets its own colour, so a long log can be skimmed for one of them. */
+.news-tag-added {
+  color: #1e8e4e;
+  border-color: #bfe6cd;
+  background: #f1faf4;
+}
+.news-tag-fixed {
+  color: #F10000;
+  border-color: #f3c9c9;
+  background: #fff5f5;
+}
+.news-tag-revised,
+.news-tag-changed,
+.news-tag-improved {
+  color: #2f6fb0;
+  border-color: #cbe0f2;
+  background: #f3f8fc;
+}
+.news-tag-updated {
+  color: #9a6a12;
+  border-color: #ecd9ae;
+  background: #fdf8ec;
+}
+.news-tag-removed {
+  color: #777;
+  border-color: #dcdcdc;
+  background: #f4f4f4;
+}
+
+/* The newest release is the one most people came for; the unreleased revision is the one to be
+   careful with, so it takes the warning colour and the release takes the safe one. */
+.news-item-latest .news-head h2:after,
+.news-item-dev .news-head h2:after {
+  display: inline-block;
+  margin-left: 12px;
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  vertical-align: 6px;
+}
+.news-item-latest .news-head h2:after {
+  content: "Latest";
+  background: #1e8e4e;
+}
+.news-item-dev .news-head h2:after {
+  content: "Unstable";
+  background: #F10000;
+}
+.news-error {
+  text-align: center;
+  color: #999;
+}
+
+/* Same chip as the navigation, so the archive opens without introducing another kind of button. */
+.news-more-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.news-more {
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 9px 22px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background: #fafafa;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.news-more:hover,
+.news-more:focus {
+  border-color: #F10000;
+  color: #F10000;
+  background: #fff;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  #ubea-news {
+    padding: 30px 0 0;
+  }
+  .news-head h2 {
+    font-size: 24px;
+  }
+  .news-tag {
+    display: block;
+    width: 74px;
+    margin-bottom: 4px;
+  }
+}
+
 #ubea-offcanvas {
   position: absolute;
   position: fixed;
@@ -340,9 +601,6 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-#ubea-offcanvas .nav-divider {
-  display: none;
 }
 #ubea-offcanvas ul li > ul {
   padding-left: 20px;
@@ -420,13 +678,6 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   transition: all .2s ease-out;
 }
-.ubea-nav-toggle.ubea-nav-white > i {
-  color: #fff;
-  background: #fff;
-}
-.ubea-nav-toggle.ubea-nav-white > i::before, .ubea-nav-toggle.ubea-nav-white > i::after {
-  background: #fff;
-}
 
 .ubea-nav-toggle i::before {
   top: -7px;
@@ -501,9 +752,6 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.5s;
   padding: 8px 30px;
 }
-.btn.btn-md {
-  padding: 8px 20px !important;
-}
 .btn.btn-lg {
   padding: 18px 36px !important;
 }
@@ -521,16 +769,6 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #ff6540 !important;
   border-color: #ff6540 !important;
 }
-.btn-primary.btn-outline {
-  background: transparent;
-  color: #F10000;
-  border: 2px solid #F10000;
-}
-.btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #F10000;
-  color: #fff;
-}
-
 
 .ubea-loader {
   position: fixed;
@@ -540,6 +778,61 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 100%;
   z-index: 9999;
   background: url(../images/loader.gif) center no-repeat #000;
+}
+
+/* The stats band sits directly under the hero and carries its black through, so the page steps from
+   the slider into the copy rather than cutting straight to white. */
+#ubea-stats {
+  background: #000;
+  color: #b9b9b9;
+  text-align: center;
+  padding: 18px 0;
+}
+#ubea-stats .stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* The chip lives on an inner element so that a linked pill is clickable across its whole area,
+   and an unlinked one looks identical without pretending to be a target. */
+#ubea-stats .stats-pills .pill {
+  display: inline-block;
+  border: 1px solid #2b2b2b;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 14px;
+  background: #141414;
+  color: #b9b9b9;
+  white-space: nowrap;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#ubea-stats .stats-pills a.pill:hover,
+#ubea-stats .stats-pills a.pill:focus {
+  border-color: #F10000;
+  color: #b9b9b9;
+}
+#ubea-stats .stats-pills i {
+  color: #F10000;
+  margin-right: 6px;
+}
+#ubea-stats .stats-pills b {
+  color: #fff;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  #ubea-stats {
+    padding: 15px 0;
+  }
+}
+
+hero-component {
+  display: block;
 }
 
 #ubea-hero {
@@ -666,36 +959,71 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 40px;
   }
 }
-#ubea-hero .flexslider .slider-text > .slider-text-inner .ubea-lead {
-  font-size: 20px;
-  color: #fff;
-}
-#ubea-hero .flexslider .slider-text > .slider-text-inner .ubea-lead .icon-heart {
-  color: #d9534f;
-}
 
 .ubea-section-overflow {
   overflow: hidden;
   position: relative;
 }
 
-/* the icon indents each column by another 15%, which pulls both blocks of copy
-   toward the middle: give the row more room than the default container */
-@media screen and (min-width: 1200px) {
-  #ubea-about .ubea-container {
-    max-width: 1320px;
-  }
-}
-/* and keep the two columns clear of each other rather than meeting mid-page */
+/* Keeps the two columns clear of each other rather than meeting mid-page. The section used to
+   widen its container past the site's 1140px, which left this block sticking out past the header,
+   the stats band and the footer. */
 @media screen and (min-width: 992px) {
   #ubea-about > .ubea-container > .row > .col-md-6:first-child {
-    padding-right: 45px;
+    padding-right: 30px;
   }
   #ubea-about > .ubea-container > .row > .col-md-6:last-child {
-    padding-left: 45px;
+    padding-left: 30px;
   }
 }
 
+#ubea-about {
+  padding-top: 32px;
+}
+
+/* Names the section the way the navigation does, then states the claim the eight blocks back up. */
+.section-intro {
+  max-width: 980px;
+  margin: 0 auto 46px;
+  text-align: center;
+}
+.section-intro h2 {
+  margin: 0 0 16px;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+.section-intro p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #777;
+  /* Evens the two lines rather than leaving one word alone on the second. */
+  text-wrap: balance;
+}
+.section-intro .accent {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #F10000;
+  font-size: 22px;
+}
+@media screen and (max-width: 768px) {
+  #ubea-about {
+    padding-top: 22px;
+  }
+  .section-intro {
+    margin-bottom: 32px;
+  }
+  .section-intro h2 {
+    font-size: 25px;
+  }
+  .section-intro p {
+    font-size: 15px;
+  }
+  .section-intro .accent {
+    font-size: 19px;
+  }
+}
 #ubea-about .feature-left .icon i {
   color: #cccccc !important;
 }
