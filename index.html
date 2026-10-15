@@ -53,7 +53,6 @@ Based on uBeasa template (developed by freshDesignweb).
 
     <hero-component></hero-component>
 
-
     <div class="ubea-section-overflow" >
         <div class="ubea-section" id="ubea-about" data-section="about">
             <div class="ubea-container">
@@ -65,110 +64,130 @@ Based on uBeasa template (developed by freshDesignweb).
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-terminal"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>End-to-end.</h3>
-                                        <p>Detection is where most scanners stop and your afternoon starts. Parameters, cookies and headers are probed until one of them executes, and that <a href="https://owasp.org/www-community/attacks/Command_Injection" target="_blank" rel="noopener noreferrer">injection point</a> becomes an interactive <a href="https://github.com/commixproject/commix/wiki/Getting-shells" target="_blank" rel="noopener noreferrer">shell</a> for post-exploitation.</p>
-                                    </div>
-                                </div>
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-terminal"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>End-to-end.</h3>
+                                <p>Detection is where most scanners stop and your afternoon starts. Parameters, cookies and headers are probed until one of them executes. That <a href="https://owasp.org/www-community/attacks/Command_Injection" target="_blank" rel="noopener noreferrer">injection point</a> becomes an interactive <a href="https://github.com/commixproject/commix/wiki/Getting-shells" target="_blank" rel="noopener noreferrer">shell</a> for post-exploitation.</p>
                             </div>
-
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-mask"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Evasive.</h3>
-                                        <p>Access denied is not a verdict. Multiple <a href="https://github.com/commixproject/commix/wiki/Filters-bypass-examples" target="_blank" rel="noopener noreferrer">tamper scripts</a> rebuild the payload: encoding, casing, whitespace, shell substitution. Chain them until the WAF sees nothing worth blocking. It logs the request; you get a shell.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-folder-tree"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Thorough.</h3>
-                                        <p>Getting a shell is only the start. <a href="https://github.com/commixproject/commix/wiki/Usage#file-access-options" target="_blank" rel="noopener noreferrer">Read and write files</a>, <a href="https://github.com/commixproject/commix/wiki/Usage#enumeration-options" target="_blank" rel="noopener noreferrer">enumerate</a> users, password hashes, privileges and system info, or take the lot in one pass. Whatever the web user reaches, you reach.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-cubes"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Modular.</h3>
-                                        <p>Write your own <a href="https://github.com/commixproject/commix/wiki/Module-development" target="_blank" rel="noopener noreferrer">modules</a> and bend the tool to the job in front of you. The core is already there: a module is plain Python that reuses it, not a framework to learn.</p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-fingerprint"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Fluent.</h3>
-                                        <p>An injection point is not enough. An application hosted on Windows will never fall to a payload designed for Linux. That is why an active fingerprint comes first, and every payload is shaped to the operating system it identifies.</p>
-                                    </div>
-                                </div>
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-fingerprint"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Fluent.</h3>
+                                <p>An injection point is not enough. An application hosted on Windows will never fall to a payload designed for Linux. That is why an active fingerprint comes first, and every payload is shaped to the <a href="https://github.com/commixproject/commix/wiki/Usage#force-os-detection-to-windows-or-unixlinux-for-tailored-payloads" target="_blank" rel="noopener noreferrer">operating system</a> it identifies.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-satellite-dish"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Relentless.</h3>
-                                        <p>Nothing coming back does not mean nothing ran. When the output comes back, <a href="https://github.com/commixproject/commix/wiki/Techniques#results-based-injections" target="_blank" rel="noopener noreferrer">results-based techniques</a> read it off; when it does not, <a href="https://github.com/commixproject/commix/wiki/Techniques#blind-injections" target="_blank" rel="noopener noreferrer">time-related ones</a> clock it out of the delay; out-of-band callbacks reach <a href="https://github.com/projectdiscovery/interactsh" target="_blank" rel="noopener noreferrer">interactsh</a> over HTTP or plain DNS.</p>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-mask"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Evasive.</h3>
+                                <p>Access denied is not a verdict. Multiple <a href="https://github.com/commixproject/commix/wiki/Filters-bypass-examples" target="_blank" rel="noopener noreferrer">tamper scripts</a> rebuild the payload: encoding, casing, whitespace, shell substitution. Chain them until the WAF sees nothing worth blocking. It logs the request; you get a shell.</p>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-scale-balanced"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Provable.</h3>
-                                        <p>A finding you have to manually prove is half a finding. Every supported <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank" rel="noopener noreferrer">technique</a> confirms by executing, and every injection point is re-tested for false positives before it is reported.</p>
-                                    </div>
-                                </div>
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-satellite-dish"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Relentless.</h3>
+                                <p>Nothing coming back does not mean nothing ran. <a href="https://github.com/commixproject/commix/wiki/Techniques#results-based-injections" target="_blank" rel="noopener noreferrer">Results-based</a> techniques read the output when it comes back; <a href="https://github.com/commixproject/commix/wiki/Techniques#blind-injections" target="_blank" rel="noopener noreferrer">boolean-based</a> ones read it in how the page answers, <a href="https://github.com/commixproject/commix/wiki/Techniques#blind-injections" target="_blank" rel="noopener noreferrer">time-based</a> ones clock it in the delay, and out-of-band callbacks reach <a href="https://github.com/projectdiscovery/interactsh" target="_blank" rel="noopener noreferrer">interactsh</a> over HTTP or plain DNS.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="col-md-12">
-                                <div class="feature-left">
-                                    <span class="icon">
-                                        <i class="fa-solid fa-code-branch"></i>
-                                    </span>
-                                    <div class="feature-copy">
-                                        <h3>Open-source.</h3>
-                                        <p>This software is free and open source. There is no pro edition to upsell you. It ships under <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a> and everything you need is in the repo. The git log goes back to 2014.</p>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-folder-tree"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Thorough.</h3>
+                                <p>Getting a shell is only the start. <a href="https://github.com/commixproject/commix/wiki/Usage#file-access-options" target="_blank" rel="noopener noreferrer">Read and write files</a>, enumerate <a href="https://github.com/commixproject/commix/wiki/Usage#retrieve-a-list-of-user-accounts" target="_blank" rel="noopener noreferrer">users</a>, <a href="https://github.com/commixproject/commix/wiki/Usage#attempt-to-retrieve-password-hashes" target="_blank" rel="noopener noreferrer">password hashes</a>, <a href="https://github.com/commixproject/commix/wiki/Usage#retrieve-detailed-privilege-information" target="_blank" rel="noopener noreferrer">privileges</a> and <a href="https://github.com/commixproject/commix/wiki/Usage#retrieve-detailed-system-information" target="_blank" rel="noopener noreferrer">system info</a>, or take the lot in one pass. Whatever the web user reaches, you reach.</p>
                             </div>
+                        </div>
+                    </div>
 
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Provable.</h3>
+                                <p>A finding you have to manually prove is half a finding. Every supported <a href="https://github.com/commixproject/commix/wiki/Techniques" target="_blank" rel="noopener noreferrer">technique</a> confirms by executing, and every injection point is re-tested for false positives before it is reported.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-cubes"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Modular.</h3>
+                                <p>No module list is ever complete. Write your own <a href="https://github.com/commixproject/commix/wiki/Module-development" target="_blank" rel="noopener noreferrer">modules</a> and bend commix to the job in front of you - the core is already there, and a module is plain Python that reuses it, not a framework to learn.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-plug"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Scriptable.</h3>
+                                <p>Not every scan has someone watching it. A <a href="https://github.com/commixproject/commix/wiki/API" target="_blank" rel="noopener noreferrer">REST API</a> creates, configures and runs them over HTTP - built for automation and CI, not just a terminal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>At scale.</h3>
+                                <p>One parameter was never the limit. Feed it a <a href="https://github.com/commixproject/commix/wiki/Usage#load-multiple-targets-enlisted-in-a-file" target="_blank" rel="noopener noreferrer">bulk file</a>, a <a href="https://github.com/commixproject/commix/wiki/Usage#parse-targets-from-proxy-log-file" target="_blank" rel="noopener noreferrer">proxy log</a>, a <a href="https://github.com/commixproject/commix/wiki/Usage#scan-urls-from-sitemapxml" target="_blank" rel="noopener noreferrer">sitemap</a> or a <a href="https://github.com/commixproject/commix/wiki/Usage#crawl-website-starting-from-target-url" target="_blank" rel="noopener noreferrer">live crawl</a>, and every request in it is tested in turn - one run instead of one-by-one.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-left">
+                            <span class="icon">
+                                <i class="fa-solid fa-code-branch"></i>
+                            </span>
+                            <div class="feature-copy">
+                                <h3>Open-source.</h3>
+                                <p>Free is not a trial. There is no pro edition to upsell you - it ships under <a href="https://github.com/commixproject/commix/wiki/License" target="_blank" rel="noopener noreferrer">GPLv3</a>, everything you need is in the repo, and the git log goes back to 2014.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

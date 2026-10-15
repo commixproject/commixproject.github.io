@@ -864,7 +864,9 @@ hero-component {
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  /* The image is busiest in its lower log lines; centering higher keeps the sparser banner behind
+     the slide text instead of a wall of dense log noise. */
+  background-position: center 15%;
   min-height: 460px;
   position: relative;
 }
