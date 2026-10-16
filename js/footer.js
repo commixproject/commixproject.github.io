@@ -29,7 +29,7 @@ class Footer extends HTMLElement {
                   and
                   <i class="fa fa-coffee text-muted" aria-hidden="true"></i>
                   by
-                  <a href="https://github.com/stasinopoulos" target="_blank" rel="noopener noreferrer">Anastasios Stasinopoulos</a>.
+                  <a href="https://stasinopoulos.github.io/" target="_blank" rel="noopener noreferrer">Anastasios Stasinopoulos</a>.
                 </small>
               </p>
               <p class="pull-right">
